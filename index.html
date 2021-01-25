@@ -416,8 +416,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-                <li>What is Jenkins</li>
-                
+                <li>Introduction</li>
+                <li>Project Scenario</li>                
 				
 
 		</div>
@@ -434,10 +434,10 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
             <p>
                 <center>
                     <h1 class="headings">
-                        What is Jenkins ?
+                        Introduction
                     </h1>
                 </center> <br>
-               
+               intro
             </p> <hr>
 
 
@@ -447,14 +447,44 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
                         
                     </h1>
                 </center> <br>
+                A node-express app is created and pushed into Github.
+                <br><br>
+                Jenkins firstly clones the project from github, then using Dockerfile packages the aplication and pushes it to dockerhub, then it gets deployed in the kubernetes cluster.
+                <br><br>
+                A jenkins master server is setup with docker and a slave is integrated with it to execute tasks.
+                <br><br>
+                Plugins required :
+                <ul>
+                    <li>Pipeline</li>
+                    <li>Github</li>
+                    <li>Docker Pipeline</li>
+                    <li>Cloudbees docker build and push</li>
+                    <li>Kubernetes Credentials</li>
+                    <li>Kubernetes Deployment</li>
+                </ul>
+                <br><br>
+                Credentials to be created :
+                <br>
+                <ul>
+                    <li>Github</li>
+                    <li>Dockerhub</li>
+                    <li>Kubeconfig file secret</li>
+                    <li>ssh for slave jenkins</li>
+                </ul>
+                <br><br>
+                Dockerfile used :
                 <center>
-                    <img src="assets/GIT/3.png" width="720px">
+                    <img src="assets/jenkins/dockerfile.png">
                 </center><br>
+                <br><br>
+                Jenkinsfile used :
+                <center>
+                    <img src="assets/jenkins/jenkinsfile.png" width="720px">
+                </center><br>
+                <br><br>
+
+
             </p> <hr>
-
-
-
-
 
 	    </div>
 </div>
