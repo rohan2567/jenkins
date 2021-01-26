@@ -410,13 +410,12 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 		</div>
 		
 		<div id="name">
-			<h1 class="quickFade delayTwo">Jenkins</h1>
+			<h1 class="quickFade delayTwo">Jenkins CI-CD</h1>
 			<!-- <h2 class="quickFade delayThree">DevOps</h2> -->
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-                <li>Introduction</li>
                 <li>Project Scenario</li>                
 				
 
@@ -430,17 +429,6 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 
 	    <div id="mainArea" class="quickFade delayFive">
-		    
-            <p>
-                <center>
-                    <h1 class="headings">
-                        Introduction
-                    </h1>
-                </center> <br>
-               intro
-            </p> <hr>
-
-
             <p>
                 <center>
                     <h1 class="headings">
@@ -449,7 +437,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
                 </center> <br>
                 A node-express app is created and pushed into Github.
                 <br><br>
-                Jenkins firstly clones the project from github, then using Dockerfile packages the aplication and pushes it to dockerhub, then it gets deployed in the kubernetes cluster.
+                Jenkins firstly clones the project from github using Poll SCM, then using Dockerfile packages the aplication and pushes it to dockerhub, then it gets deployed in the kubernetes cluster.
                 <br><br>
                 A jenkins master server is setup with docker and a slave is integrated with it to execute tasks.
                 <br><br>
@@ -471,24 +459,24 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
                     <li>Kubeconfig file secret</li>
                     <li>ssh for slave jenkins</li>
                 </ul>
-                <br><br>
-                Dockerfile used :
+                <br>
+                Dockerfile used :<br>
                 <center>
                     <img src="assets/jenkins/dockerfile.png">
                 </center><br>
-                <br><br>
-                Jenkinsfile used :
+                Jenkinsfile used :<br><br>
                 <center>
                     <img src="assets/jenkins/jenkinsfile.png" width="720px">
                 </center><br>
-                <br><br>
-                Deployment File Used :
+                Deployment File Used :<br>
                 <center>
-                    <img src="assets/jenkins/jenkinsfile.png" width="720px">
+                    <img src="assets/jenkins/yaml.png">
                 </center><br>
-                Now go to K8s master and "kubectl get all"
-                <br>
-                Check the external IP and run the application.
+                Make sure the nodeport used in the deployment file is accessible.The port is open to access.
+                Now, the node-application is deployed into K8s cluster.<br>
+                As we have created a NodePort service,
+                Acess the Application using 
+                <br><center><div style="color: red;">node-ip:31113</div></center>
 
             </p> <hr>
 
